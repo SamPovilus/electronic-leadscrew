@@ -40,11 +40,11 @@
 //================================================================================
 
 // For Imperial leadscrews: pitch in Threads Per Inch (TPI)
-#define LEADSCREW_TPI 12
+//#define LEADSCREW_TPI 12
 
 // For metric leadscrews: pitch in hundredths of a millimeter (HMM)
 // Example: 200hmm = 2mm
-//#define LEADSCREW_HMM 200
+#define LEADSCREW_HMM 200
 
 
 
@@ -65,6 +65,7 @@
 
 // Steps and microsteps
 #define STEPPER_MICROSTEPS 8
+
 #define STEPPER_RESOLUTION 200
 
 // Separate step and microstep settings for feed rates.  Redefine these if your
@@ -96,7 +97,12 @@
 //================================================================================
 
 // Encoder resolution (counts per revolution)
-#define ENCODER_RESOLUTION 4096
+
+
+// 56 teeth on the spindle, 84 teeth on the encoder is a ration of 0.66666666 or 1.5
+// 56 "" 80 "" 0.7 or 1.42857142857
+//So lets try the 84 tooth gear and a higher ratio here
+#define ENCODER_RESOLUTION 1120
 
 // Which encoder input to use
 #define ENCODER_USE_EQEP1

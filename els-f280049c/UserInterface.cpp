@@ -26,16 +26,23 @@
 
 #include "UserInterface.h"
 
+const MESSAGE STARTUP_MESSAGE_3 =
+{
+  .message = { LETTER_E, LETTER_L, LETTER_S, DASH, ONE | POINT, FOUR | POINT, ZERO, SEVEN },
+  .displayTime = UI_REFRESH_RATE_HZ * 2.0
+};
+
 const MESSAGE STARTUP_MESSAGE_2 =
 {
-  .message = { LETTER_E, LETTER_L, LETTER_S, DASH, ONE | POINT, FOUR | POINT, ZERO, ZERO },
-  .displayTime = UI_REFRESH_RATE_HZ * 1.5
+ .message = { LETTER_C, LETTER_O, LETTER_M, LETTER_W, LETTER_O, LETTER_M, FOUR, TWO },
+ .displayTime = UI_REFRESH_RATE_HZ * 1.0,
+ .next = &STARTUP_MESSAGE_3
 };
 
 const MESSAGE STARTUP_MESSAGE_1 =
 {
  .message = { LETTER_C, LETTER_L, LETTER_O, LETTER_U, LETTER_G, LETTER_H, FOUR, TWO },
- .displayTime = UI_REFRESH_RATE_HZ * 1.5,
+ .displayTime = UI_REFRESH_RATE_HZ * 1.0,
  .next = &STARTUP_MESSAGE_2
 };
 
